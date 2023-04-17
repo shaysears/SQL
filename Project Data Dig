@@ -1,0 +1,49 @@
+/* Put your data in here and query it! */
+/*Winston's Donut logs*/
+
+CREATE TABLE winstons_donut_logs (
+    id TEXT PRIMARY KEY,
+    status TEXT,
+    years_old INTEGER,
+    donuts_eaten INTEGER,
+    reason TEXT
+    );
+
+INSERT INTO winstons_donut_logs VALUES (1, "baby winston lvl1", 1, 10, "(Gummed)");
+INSERT INTO winstons_donut_logs VALUES (2, "baby winston lvl2", 2, 40, "(Gummed)");
+INSERT INTO winstons_donut_logs VALUES (3, "baby winston lvl3", 3, 50, "(Gummed)");
+INSERT INTO winstons_donut_logs VALUES (4, "toddler winston lvl1", 4, 300, "");
+INSERT INTO winstons_donut_logs VALUES (5, "toddler winston lvl2", 5, 400, "");
+INSERT INTO winstons_donut_logs VALUES (6, "kid winston lvl1", 6, 1200, "");
+INSERT INTO winstons_donut_logs VALUES (7, "kid winston lvl2", 7, 1000, "");
+INSERT INTO winstons_donut_logs VALUES (8, "kid winston lvl3", 8, 1000, "");
+INSERT INTO winstons_donut_logs VALUES (9, "kid winston lvl4", 9, 1000, "");
+INSERT INTO winstons_donut_logs VALUES (10, "winstween lvl1", 10, 1500, "");/** tween means someone between 10 and 12 so I did winstween- tween not teen**/
+INSERT INTO winstons_donut_logs VALUES (11, "winstween lvl2", 11, 500, "Braces");
+INSERT INTO winstons_donut_logs VALUES (12, "winstween lvl3", 12, 300, "Braces");
+INSERT INTO winstons_donut_logs VALUES (13, "winsteen lvl1", 13, 400, "Braces");
+INSERT INTO winstons_donut_logs VALUES (14, "winsteen lvl2", 14, 1300, "No Braces");
+INSERT INTO winstons_donut_logs VALUES (15, "winsteen lvl3", 15, 2000, "");
+INSERT INTO winstons_donut_logs VALUES (16, "winsteen lvl4", 16, 2000, "");
+INSERT INTO winstons_donut_logs VALUES (17, "winsteen lvl5", 17, 2000, "");
+INSERT INTO winstons_donut_logs VALUES (18, "winsteen lvl6", 18, 2000, "");
+INSERT INTO winstons_donut_logs VALUES (19, "winsteen lvl7", 19, 2000, "");
+INSERT INTO winstons_donut_logs VALUES (20, "young adult winston lvl1", 20, 2000, "");
+
+Select status, years_old, donuts_eaten from winstons_donut_logs;
+
+SELECT * from winstons_donut_logs where years_old < 4 AND donuts_eaten > 500 or reason is "gummed";
+
+SELECT MAX(years_old) FROM winstons_donut_logs;
+SELECT AVG(years_old) FROM winstons_donut_logs;
+SELECT MIN(years_old) FROM winstons_donut_logs;
+
+SELECT status, COUNT(*) as num_won FROM winstons_donut_logs group by status HAVING years_old > 17;
+
+SELECT status, CASE 
+    WHEN donuts_eaten < 300 AND donuts_eaten > 10 THEN "Minimalist"
+    WHEN donuts_eaten < 1500 AND donuts_eaten > 301 THEN "Addicted"
+    WHEN donuts_eaten > 3000 THEN "Full of Sugar"
+    END "Final" FROM winstons_donut_logs ORDER BY Final;
+    
+    
