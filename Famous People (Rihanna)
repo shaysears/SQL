@@ -1,0 +1,65 @@
+Create Table Rihanna_Songs (id integer primary key,
+    song_name text, 
+    album_name text,
+    release_year integer);
+    
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Rude Boy", "Rated_R", 2009);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Work", "Anti", 2016);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)    
+    VALUES ("Umbrella", "Good_Girl_Gone_Bad", 2007);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("BBHMM", "BBHMM", 2015);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("We Found Love", "Talk That Talk", 2011);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Lift Me Up", "Black Panther 2", 2023);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Diamond", "Unapologetic", 2012);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Needed Me", "ANTI", 2016);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Pon de Replay", "Music of The Sun", 2005);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Te Amo", "Rated_R", 2009);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Pour It Up", "Unapologetic", 2012);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("You da One", "Talk That Talk", 2011);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)        
+    VALUES ("Disturbia", "Good_Girl_Gone_Bad", 2007);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("S&M", "Loud", 2010);
+INSERT INTO Rihanna_Songs (song_name, album_name, release_year)
+    VALUES ("Take a Bow", "Good Girl Cone Bad-Reloaded", 2008);
+
+    
+Create Table Rihanna_Family (id integer primary key,
+    name text,
+    relationship_to_singer text,
+    age integer);
+INSERT INTO Rihanna_Family (name, relationship_to_singer, age)
+    VALUES ("ASAP Rocky", "husband", 34 );
+INSERT INTO Rihanna_Family (name, relationship_to_singer, age)
+    VALUES ("Ronald Fenty", "dad", 69 );
+INSERT INTO Rihanna_Family (name, relationship_to_singer, age)
+    VALUES ("Monica Braithwaite", "mother", 54 );
+    
+Create Table Rihanna_Movies (id integer primary key,
+    movie_name text,
+    year_released integer);
+INSERT INTO Rihanna_Movies (movie_name, year_released)
+    VALUES ("Guava Island", 2019);
+INSERT INTO Rihanna_Movies (movie_name, year_released)
+    VALUES ("Every Con Has Its Pros", 2018);
+INSERT INTO Rihanna_Movies (movie_name, year_released)
+    VALUES ("Home", 2015);
+INSERT INTO Rihanna_Movies (movie_name, year_released)
+    VALUES ("This is the End", 2013);
+INSERT INTO Rihanna_Movies (movie_name, year_released)
+    VALUES ("Battleship", 2012);
+
+/*Show the song relase the same year as movie release*/
+
+Select rihanna_songs.song_name, rihanna_movies.year_released as year_both_released from rihanna_songs join rihanna_movies on rihanna_songs.id=rihanna_movies.id;
