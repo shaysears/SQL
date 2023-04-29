@@ -1,3 +1,5 @@
+#I created a table basedon my favorite entertainer Rihanna  which includes her songs, albums and family members.
+
 Create Table Rihanna_Songs (id integer primary key,
     song_name text, 
     album_name text,
