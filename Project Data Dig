@@ -1,5 +1,4 @@
-/* Put your data in here and query it! */
-/*Winston's Donut logs*/
+#Winston's Donut logs
 
 CREATE TABLE winstons_donut_logs (
     id TEXT PRIMARY KEY,
