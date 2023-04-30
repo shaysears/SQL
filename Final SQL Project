@@ -1,4 +1,4 @@
-#In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer,, order and billing data.
+#In this SQL, I'm querying a database with several tables to quantify statistics about customer,, order and billing data.
 
 #Show the Employees who are Sales Agents.
 SELECT * FROM chinook.Employees WHERE Title = "Sales Support Agent" ;
